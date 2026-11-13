@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en" data-mode="light" data-font="serif">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loja Natalina</title>
+<meta name="description" content="Loja Natalina">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23ff0000%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2222%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23fff%22%20font-family%3D%22system-ui%2Csans-serif%22%3EL%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loja Natalina">
+<meta property="og:description" content="Loja Natalina">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loja Natalina">
+<meta name="twitter:description" content="Loja Natalina">
+<meta property="og:image" content="images/photo-1.webp">
+<meta name="twitter:image" content="images/photo-1.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Loja Natalina","telephone":"+55 15 998205675","image":"images/photo-1.webp"}</script>
+<noscript><style>.ww-tabs{display:none}.ww-panel[hidden]{display:block}</style></noscript>
+<style>
+/* Self-hosted styles for published sites (no CDN — fast + truly single-origin).
+   Theme is driven by CSSOM: --ww-accent + data-font/data-mode on <html>,
+   data-layout on #app. */
+
+:root {
+  --ww-accent: #2563eb;
+  --ww-fg: #1a1a1a;
+  --ww-muted: #5a5a5a;
+  --ww-border: #e5e5e5;
+  --ww-bg: #ffffff;
+  --ww-card: #f7f7f8;
+  --ww-max: 760px;
+  --ww-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Font presets */
+:root[data-font="serif"]   { --ww-font: Georgia, Cambria, "Times New Roman", Times, serif; }
+:root[data-font="rounded"] { --ww-font: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, sans-serif; }
+:root[data-font="mono"]    { --ww-font: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace; }
+
+/* Dark palette: applies for OS-dark (unless the site forces light) or when forced dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mode="light"]) {
+    --ww-fg: #ededed; --ww-muted: #9a9a9a; --ww-border: #333; --ww-bg: #121212; --ww-card: #1b1b1d;
+  }
+}
+:root[data-mode="dark"] {
+  --ww-fg: #ededed; --ww-muted: #9a9a9a; --ww-border: #333; --ww-bg: #121212; --ww-card: #1b1b1d;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font: 16px/1.6 var(--ww-font);
+  color: var(--ww-fg);
+  background: var(--ww-bg);
+  -webkit-font-smoothing: antialiased;
+}
+#app { max-width: var(--ww-max); margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+/* Header */
+.ww-header { text-align: center; margin-bottom: 1.5rem; }
+.ww-name { font-size: 2rem; margin: 0 0 .25rem; }
+.ww-tagline { color: var(--ww-muted); margin: 0 0 .5rem; }
+.ww-contact { font-size: .95rem; margin: .25rem 0 0; }
+.ww-contact a { color: var(--ww-accent); text-decoration: none; }
+.ww-contact a:hover { text-decoration: underline; }
+
+/* Shell (nav + content) */
+.ww-shell { display: block; }
+.ww-tabs {
+  display: flex; flex-wrap: wrap; gap: .25rem;
+  border-bottom: 1px solid var(--ww-border);
+  margin-bottom: 1.5rem;
+}
+.ww-tab {
+  appearance: none; background: none; border: 0; cursor: pointer; font: inherit;
+  color: var(--ww-nav-fg, var(--ww-muted)); padding: .6rem .9rem; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.ww-tab:hover { color: var(--ww-fg); }
+.ww-tab.is-active { color: var(--ww-accent); border-bottom-color: var(--ww-accent); font-weight: 600; }
+.ww-panel[hidden] { display: none; }
+
+/* Sticky top tab strip (tabbed + top + sticky) */
+#app[data-page="tabbed"][data-nav="top"][data-sticky] .ww-tabs {
+  position: sticky; top: 0; z-index: 10; background: var(--ww-bg);
+}
+
+/* SIDE nav (tabbed): vertical rail on the left */
+#app[data-page="tabbed"][data-nav="side"] .ww-shell { display: flex; align-items: flex-start; gap: 1.75rem; }
+#app[data-page="tabbed"][data-nav="side"] .ww-tabs {
+  flex-direction: column; flex-wrap: nowrap; flex: 0 0 180px;
+  border-bottom: 0; border-right: 1px solid var(--ww-border); margin: 0; padding-right: .5rem;
+}
+#app[data-page="tabbed"][data-nav="side"] .ww-tab {
+  text-align: left; width: 100%; border-bottom: 0;
+  border-left: 2px solid transparent; margin: 0 0 0 -.5rem; padding-left: .8rem; border-radius: 0;
+}
+#app[data-page="tabbed"][data-nav="side"] .ww-tab.is-active { border-left-color: var(--ww-accent); border-bottom-color: transparent; }
+#app[data-page="tabbed"][data-nav="side"] .ww-content { flex: 1; min-width: 0; }
+#app[data-page="tabbed"][data-nav="side"][data-sticky] .ww-tabs { position: sticky; top: 1rem; }
+@media (max-width: 640px) {
+  #app[data-page="tabbed"][data-nav="side"] .ww-shell { display: block; }
+  #app[data-page="tabbed"][data-nav="side"] .ww-tabs {
+    flex-direction: row; flex-wrap: wrap; border-right: 0; position: static;
+    border-bottom: 1px solid var(--ww-border); padding: 0; margin-bottom: 1.5rem;
+  }
+  #app[data-page="tabbed"][data-nav="side"] .ww-tab { width: auto; border-left: 0; border-bottom: 2px solid transparent; margin: 0; }
+  #app[data-page="tabbed"][data-nav="side"] .ww-tab.is-active { border-left-color: transparent; border-bottom-color: var(--ww-accent); }
+}
+
+/* BOTTOM nav (tabbed): fixed bar pinned to the viewport bottom, like an app */
+#app[data-page="tabbed"][data-nav="bottom"] .ww-tabs {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; margin: 0;
+  border-bottom: 0; border-top: 1px solid var(--ww-border); background: var(--ww-bg);
+  justify-content: center; flex-wrap: nowrap; overflow-x: auto; padding: .3rem .5rem;
+}
+#app[data-page="tabbed"][data-nav="bottom"] .ww-tab { margin-bottom: 0; border-bottom: 0; }
+#app[data-page="tabbed"][data-nav="bottom"] .ww-tab.is-active { border-bottom: 0; }
+#app[data-page="tabbed"][data-nav="bottom"] .ww-content { padding-bottom: 3.5rem; }
+
+/* Per-block wrapper. A plain block box with no margin/padding of its own, so an
+   unstyled block flows just as before (its inner margins collapse through) while
+   still being a real box the builder can outline on hover/highlight. Format
+   tokens (fmt) turn into the data-* rules below. */
+/* Shared format tokens (.ww-fmt) — align/size/colour apply to a block wrapper OR
+   a section container, so section styling cascades into its blocks (which can
+   still override with their own token). */
+.ww-fmt[data-ww-align="left"]   { text-align: left; }
+.ww-fmt[data-ww-align="center"] { text-align: center; }
+.ww-fmt[data-ww-align="right"]  { text-align: right; }
+.ww-fmt[data-ww-size="s"]  { font-size: .88em; }
+.ww-fmt[data-ww-size="l"]  { font-size: 1.15em; }
+.ww-fmt[data-ww-size="xl"] { font-size: 1.35em; }
+.ww-fmt[data-ww-color="muted"]  { color: var(--ww-muted); }
+.ww-fmt[data-ww-color="accent"] { color: var(--ww-accent); }
+/* Centre/right also centres the flex rows and moves list markers inline (they
+   sit in the left gutter and text-align alone won't touch them). */
+.ww-fmt[data-ww-align="center"] .ww-hero-actions,
+.ww-fmt[data-ww-align="center"] .ww-social { justify-content: center; }
+.ww-fmt[data-ww-align="right"] .ww-hero-actions,
+.ww-fmt[data-ww-align="right"] .ww-social { justify-content: flex-end; }
+.ww-fmt[data-ww-align="center"] .ww-hours { margin-left: auto; margin-right: auto; }
+.ww-fmt[data-ww-align="center"] .ww-list,
+.ww-fmt[data-ww-align="right"] .ww-list { list-style-position: inside; padding-left: 0; }
+/* Spacing + background stay block-only (a section uses its own Background). */
+.ww-blk[data-ww-space="tight"] { margin-block: .25rem; }
+.ww-blk[data-ww-space="roomy"] { margin-block: 2.5rem; }
+.ww-blk[data-ww-bg="card"]   { background: var(--ww-card); padding: 1.1rem 1.25rem; border-radius: 12px; }
+.ww-blk[data-ww-bg="accent"] { background: var(--ww-accent); color: #fff; padding: 1.1rem 1.25rem; border-radius: 12px; }
+
+/* Basic blocks */
+.ww-h { font-size: 1.3rem; margin: 1.5rem 0 .5rem; }
+.ww-p { margin: .75rem 0; }
+.ww-list { margin: .75rem 0; padding-left: 1.25rem; }
+.ww-img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; display: block; }
+.ww-divider { border: 0; border-top: 1px solid var(--ww-border); margin: 1.5rem 0; }
+
+/* Gallery — grid (uniform rows that wrap) or scroll (horizontal swipe/snap) */
+.ww-gallery { margin: 1rem 0; }
+.ww-gallery[data-layout="grid"] {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .6rem;
+}
+.ww-gallery[data-layout="grid"] .ww-gallery-item { aspect-ratio: 1 / 1; }
+.ww-gallery[data-layout="scroll"] {
+  display: flex; gap: .6rem; overflow-x: auto; padding-bottom: .5rem;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+}
+.ww-gallery[data-layout="scroll"] .ww-gallery-item {
+  flex: 0 0 auto; width: min(78%, 320px); aspect-ratio: 4 / 3; scroll-snap-align: start;
+}
+.ww-gallery-item { overflow: hidden; border-radius: 8px; }
+.ww-gallery-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Clickable prev/next arrows for a scroll gallery */
+.ww-gallery-wrap { position: relative; }
+.ww-gallery-nav {
+  position: absolute; top: calc(50% - .25rem); transform: translateY(-50%); z-index: 2;
+  width: 2.4rem; height: 2.4rem; display: grid; place-items: center;
+  border: 1px solid var(--ww-border); border-radius: 50%;
+  background: var(--ww-bg); color: var(--ww-fg);
+  font: inherit; font-size: 1.5rem; line-height: 1; cursor: pointer;
+  opacity: .92; box-shadow: 0 1px 6px rgba(0,0,0,.18);
+}
+.ww-gallery-nav:hover { opacity: 1; }
+.ww-gallery-prev { left: .4rem; }
+.ww-gallery-next { right: .4rem; }
+@media (max-width: 560px) { .ww-gallery-nav { width: 2rem; height: 2rem; font-size: 1.2rem; } }
+/* Click-to-full-size: gallery and image blocks are zoomable */
+.ww-gallery-img, .ww-img { cursor: zoom-in; }
+.ww-lightbox {
+  position: fixed; inset: 0; z-index: 1000; padding: 1.5rem;
+  background: rgba(0,0,0,.86); display: grid; place-items: center; cursor: zoom-out;
+}
+.ww-lightbox img { max-width: 100%; max-height: 100%; border-radius: 6px; box-shadow: 0 6px 34px rgba(0,0,0,.55); }
+.ww-lightbox-close {
+  position: fixed; top: 1rem; right: 1rem; width: 2.6rem; height: 2.6rem; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.16); color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+.ww-lightbox-close:hover { background: rgba(255,255,255,.3); }
+.ww-lightbox-nav {
+  position: fixed; top: 50%; transform: translateY(-50%); z-index: 1001;
+  width: 3rem; height: 3rem; border: 0; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(255,255,255,.16); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer;
+}
+.ww-lightbox-nav:hover { background: rgba(255,255,255,.3); }
+.ww-lightbox-prev { left: 1rem; }
+.ww-lightbox-next { right: 1rem; }
+@media (max-width: 560px) { .ww-lightbox-nav { width: 2.4rem; height: 2.4rem; font-size: 1.5rem; } }
+
+/* Menu / price list */
+.ww-menu-title { font-size: 1.1rem; margin: 1.25rem 0 .5rem; }
+.ww-menu { display: flex; flex-direction: column; gap: .1rem; }
+.ww-menu-item { padding: .6rem 0; border-bottom: 1px solid var(--ww-border); }
+.ww-menu-item:last-child { border-bottom: 0; }
+.ww-menu-head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+.ww-menu-name { font-weight: 600; }
+.ww-menu-price { color: var(--ww-accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ww-menu-desc { color: var(--ww-muted); font-size: .92rem; margin-top: .15rem; }
+
+/* Hours */
+.ww-hours {
+  display: grid; grid-template-columns: auto auto; justify-content: space-between;
+  gap: .4rem 1.5rem; margin: 1rem 0; max-width: 420px;
+}
+.ww-hours dt { font-weight: 600; }
+.ww-hours dd { margin: 0; color: var(--ww-muted); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Buttons / CTA */
+.ww-btn {
+  display: inline-block; margin: 1rem 0; padding: .7rem 1.2rem;
+  background: var(--ww-accent); color: #fff; text-decoration: none; border-radius: 8px;
+  font-weight: 600;
+}
+.ww-btn:hover { filter: brightness(.94); }
+.ww-btn-map { background: transparent; color: var(--ww-accent); border: 1px solid var(--ww-accent); }
+
+/* Social pills */
+.ww-social { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.ww-social-link {
+  display: inline-block; padding: .4rem .8rem; border: 1px solid var(--ww-border);
+  border-radius: 999px; text-decoration: none; color: var(--ww-fg); font-size: .9rem;
+}
+.ww-social-link:hover { border-color: var(--ww-accent); color: var(--ww-accent); }
+
+/* Outline button variant (used by hero secondary + map link) */
+.ww-btn-outline { background: transparent; color: var(--ww-accent); border: 1px solid var(--ww-accent); }
+
+/* ================= SCROLLING PAGE (landing) ================= */
+html { scroll-behavior: smooth; }
+#app[data-page="scroll"] { max-width: none; margin: 0; padding: 0; }
+
+.ww-topnav {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; z-index: 10;
+  padding: .85rem 1.5rem; background: var(--ww-bg); border-bottom: 1px solid var(--ww-border);
+}
+.ww-brand { font-weight: 700; letter-spacing: .02em; color: var(--ww-nav-fg, inherit); }
+.ww-navlinks { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+.ww-navlinks a { color: var(--ww-nav-fg, var(--ww-fg)); text-decoration: none; opacity: .78; font-size: .95rem; }
+.ww-navlinks a:hover { opacity: 1; color: var(--ww-accent); }
+
+/* Scroll nav: sticky top (default) */
+#app[data-page="scroll"][data-nav="top"][data-sticky] .ww-topnav { position: sticky; top: 0; }
+
+/* Scroll nav: fixed left rail */
+#app[data-page="scroll"][data-nav="side"] { padding-left: 210px; }
+#app[data-page="scroll"][data-nav="side"] .ww-topnav {
+  position: fixed; top: 0; left: 0; bottom: 0; width: 210px; z-index: 10;
+  flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.3rem;
+  border-bottom: 0; border-right: 1px solid var(--ww-border); overflow-y: auto;
+}
+#app[data-page="scroll"][data-nav="side"] .ww-navlinks { flex-direction: column; gap: .7rem; }
+@media (max-width: 700px) {
+  #app[data-page="scroll"][data-nav="side"] { padding-left: 0; }
+  #app[data-page="scroll"][data-nav="side"] .ww-topnav {
+    position: static; width: auto; flex-direction: row; align-items: center;
+    justify-content: space-between; border-right: 0; border-bottom: 1px solid var(--ww-border);
+  }
+  #app[data-page="scroll"][data-nav="side"] .ww-navlinks { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* Scroll nav: fixed bottom bar */
+#app[data-page="scroll"][data-nav="bottom"] .ww-topnav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  border-bottom: 0; border-top: 1px solid var(--ww-border);
+}
+#app[data-page="scroll"][data-nav="bottom"] .ww-band:last-of-type { padding-bottom: 5.5rem; }
+
+.ww-band { padding: 4rem 1.5rem; }
+.ww-band-inner { max-width: 960px; margin: 0 auto; }
+
+/* Per-band text contrast (for coloured / gradient backgrounds) */
+.ww-band[data-text="light"] { color: #fff; --ww-fg: #fff; --ww-muted: rgba(255,255,255,.82); --ww-border: rgba(255,255,255,.28); }
+.ww-band[data-text="dark"]  { color: #14161a; --ww-fg: #14161a; --ww-muted: rgba(0,0,0,.6); --ww-border: rgba(0,0,0,.14); }
+.ww-band[data-text="light"] .ww-btn-outline { color: #fff; border-color: rgba(255,255,255,.7); }
+
+/* Gradient presets */
+.ww-band[data-grad="sunset"] { background: linear-gradient(135deg,#ff9a9e,#fad0c4 55%,#fbc2eb); }
+.ww-band[data-grad="aurora"] { background: linear-gradient(135deg,#a1c4fd,#c2b3fb 50%,#fbc2eb); }
+.ww-band[data-grad="blush"]  { background: linear-gradient(135deg,#fdf2f8,#fce7f3); }
+.ww-band[data-grad="mint"]   { background: linear-gradient(135deg,#d1fae5,#a7f3d0); }
+.ww-band[data-grad="slate"]  { background: linear-gradient(135deg,#334155,#0f172a); }
+.ww-band[data-grad="dusk"]   { background: linear-gradient(120deg,#4f46e5,#db2777 55%,#f59e0b); }
+
+/* Hero */
+.ww-hero { display: flex; gap: 2rem; align-items: center; }
+.ww-hero[data-align="center"] { flex-direction: column; text-align: center; align-items: center; }
+.ww-hero-text { flex: 1; min-width: 0; }
+.ww-hero[data-align="center"] .ww-hero-text { max-width: 660px; }
+.ww-hero-media { flex: 1; display: flex; justify-content: center; }
+.ww-hero-img { max-width: 100%; height: auto; border-radius: 16px; }
+.ww-eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 600; color: var(--ww-muted); margin: 0 0 .6rem; }
+.ww-hero-h { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; font-weight: 800; margin: .1rem 0 .6rem; }
+.ww-hero-sub { font-size: 1.15rem; color: var(--ww-muted); margin: 0 0 1.2rem; }
+.ww-hero-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+.ww-hero .ww-btn { margin: 0; }
+@media (max-width: 700px) { .ww-hero[data-align="split"] { flex-direction: column; text-align: center; } }
+
+/* Columns / cards */
+.ww-columns { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+.ww-col { flex: 1 1 240px; min-width: 0; }
+.ww-columns[data-style="card"] .ww-col {
+  background: var(--ww-card); border: 1px solid var(--ww-border); border-radius: 14px; padding: 1.4rem;
+}
+.ww-band[data-text="light"] .ww-columns[data-style="card"] .ww-col {
+  background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.25);
+}
+
+/* Notices (404 / coming soon) */
+.ww-notice { max-width: var(--ww-max); margin: 4rem auto; padding: 0 1.25rem; text-align: center; }
+.ww-notice h1 { font-size: 1.6rem; }
+.ww-notice a { color: var(--ww-accent); }
+
+/* "Made with Website Wombat" share-loop credit (hideable via meta.hideCredit) */
+.ww-credit{ text-align:center; padding:1.5rem 1rem; margin-top:2rem;
+  border-top:1px solid rgba(128,128,128,.18); font-size:.8rem; }
+.ww-credit-link{ color:inherit; opacity:.6; text-decoration:none; }
+.ww-credit-link:hover{ opacity:1; text-decoration:underline; }
+
+</style>
+</head>
+<body>
+<div id="app" data-slug="page-2" data-page="scroll" data-nav="top" data-sticky="1" data-layout="topbar"><nav class="ww-topnav" style="--ww-nav-fg: #ffffff;"><span class="ww-brand">Loja Natalina</span><div class="ww-navlinks"><a href="index.html">Feliz natal</a><a href="page-2.html" class="is-active">Page 2</a><a href="page-3.html">Page 3</a><a href="page-4.html">Page 4</a></div></nav><section class="ww-band" id="section"><div class="ww-band-inner"><div class="ww-blk"><p class="ww-p"></p></div></div></section><footer class="ww-credit"><a class="ww-credit-link" href="https://websitewombat.app/build?ref=credit-download" target="_blank" rel="noopener">Made with Website Wombat — build a free site</a></footer></div>
+<script type="application/json" id="manifest">{"version":2,"meta":{"name":"Loja Natalina","telephone":"+55 15 998205675","hideCredit":false},"theme":{"accent":"#ff0000","font":"serif","mode":"light","navText":"#ffffff"},"layout":"topbar","pages":[{"name":"Feliz natal","slug":"","showInNav":true,"sections":[{"label":"Home","background":{"type":"gradient","value":"mint","text":"dark"},"blocks":[{"type":"hero","align":"center","eyebrow":"O NATAL MAIS ENCANTADOR COMEÇA AQUI!","headline":"Encontre tudo para transformar seu Natal em um momento mágico e inesquecível.","image":{"src":"images/photo-1.webp","alt":"Árvore de Natal iluminada com presentes e enfeites natalinos"},"buttons":[{"label":"COMPRAR AGORA","action":{"type":"url","value":"#products"}},{"label":"VER PRODUTOS","action":{"type":"url","value":"#categories"}},{"label":"FALAR PELO WHATSAPP","action":{"type":"url","value":"https://wa.me/+5515998205675"}}],"fmt":{}}],"fmt":{},"showInNav":true},{"label":"About","background":{"type":"none","text":"auto"},"blocks":[{"type":"heading","text":"Quem somos","fmt":{}},{"type":"text","text":"Na Loja Natalina, oferecemos a você uma experiência única e encantadora de compras natalinas. Com uma seleção cuidadosamente curada de produtos, decorações, presentes e kits natalinos, estamos aqui para ajudar a tornar seu Natal mais especial.","fmt":{}}],"fmt":{}},{"label":"Categories","background":{"type":"color","value":"#ffffff","text":"dark"},"blocks":[{"type":"heading","text":"Categorias","fmt":{}},{"type":"columns","style":"card","columns":[{"blocks":[{"type":"image","src":"","alt":"Árvores de Natal","fmt":{}},{"type":"heading","text":"Árvores de Natal","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Enfeites natalinos","fmt":{}},{"type":"heading","text":"Enfeites natalinos","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Pisca-piscas e iluminação","fmt":{}},{"type":"heading","text":"Pisca-piscas e iluminação","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Guirlandas","fmt":{}},{"type":"heading","text":"Guirlandas","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Decoração para casa","fmt":{}},{"type":"heading","text":"Decoração para casa","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Presentes","fmt":{}},{"type":"heading","text":"Presentes","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Decoração de mesa","fmt":{}},{"type":"heading","text":"Decoração de mesa","fmt":{}}]},{"blocks":[{"type":"image","src":"","alt":"Kits natalinos","fmt":{}},{"type":"heading","text":"Kits natalinos","fmt":{}}]}],"fmt":{}}],"fmt":{}},{"label":"Products","background":{"type":"none","text":"auto"},"blocks":[{"type":"heading","text":"Produtos","fmt":{}},{"type":"gallery","layout":"grid","images":[{"src":"","alt":"Produto Natalino 1"},{"src":"","alt":"Produto Natalino 2"},{"src":"","alt":"Produto Natalino 3"},{"src":"","alt":"Produto Natalino 4"}],"fmt":{}}],"fmt":{}},{"label":"Contact","background":{"type":"color","value":"#ffffff","text":"dark"},"blocks":[{"type":"heading","text":"Finalize seu pedido","fmt":{}},{"type":"text","text":"Adicione os produtos ao carrinho e finalize sua compra pelo WhatsApp.","fmt":{}},{"type":"button","label":"FALE PELO WHATSAPP","action":{"type":"url","value":"https://wa.me/+5515998205675"},"fmt":{}}],"fmt":{}}]},{"name":"Page 2","slug":"","showInNav":true,"sections":[{"label":"Section","blocks":[{"type":"text","text":"","fmt":{}}],"background":{"type":"none","text":"auto"},"fmt":{}}]},{"name":"Page 3","slug":"","showInNav":true,"sections":[{"label":"Section","blocks":[{"type":"text","text":"","fmt":{}}],"background":{"type":"none","text":"auto"},"fmt":{}}]},{"name":"Page 4","slug":"","showInNav":true,"sections":[{"label":"Section","blocks":[{"type":"text","text":"","fmt":{}}],"background":{"type":"none","text":"auto"},"fmt":{}}]}],"navPlacement":"top","navSticky":true,"_active":1,"_files":["index.html","page-2.html","page-3.html","page-4.html"]}</script>
+<script>
+// Public site renderer. Reads the inlined manifest and builds the DOM for the
+// chosen layout (topbar/sidebar tabs, or a landing scroll of full-bleed bands),
+// applying the theme. Uses textContent / createElement only (never innerHTML)
+// and an https/tel/mailto href allowlist, so no manifest field can inject markup
+// or a javascript: URL even if server validation is bypassed.
+(function () {
+  "use strict";
+
+  var FONTS = { system: 1, serif: 1, rounded: 1, mono: 1 };
+  var MODES = { auto: 1, light: 1, dark: 1 };
+  var GRADS = { sunset: 1, aurora: 1, blush: 1, mint: 1, slate: 1, dusk: 1 };
+  var ACCENT_RE = /^#[0-9a-fA-F]{6}$/;
+
+  var app = document.getElementById("app");
+  var dataEl = document.getElementById("manifest");
+  if (!app || !dataEl) return;
+
+  var manifest;
+  try {
+    manifest = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    app.textContent = "Failed to load site.";
+    return;
+  }
+
+  // Derived per-manifest state — module-level so the render helpers below close
+  // over them and `build()` can refresh them on each (re)render.
+  var meta, theme, layout, mode, navPlacement, navSticky, sections, ids, brand, navHidden;
+  var pages, activeIdx, multi;
+  // True only inside the builder's live-preview iframe (page nav switches the
+  // editor's active page there, rather than navigating client-side).
+  var framed = !!(window.parent && window.parent !== window);
+
+  // Derive everything from a manifest and (re)build #app. Called once on load;
+  // in the builder it's called again on every edit so the preview updates in
+  // place instead of reloading the iframe — which is what keeps scroll position
+  // and the open tab from jumping back to the top.
+  function build(m) {
+    manifest = m || manifest;
+    meta = manifest.meta || {};
+    theme = manifest.theme || {};
+    layout = manifest.layout;
+    if (layout !== "sidebar" && layout !== "landing") layout = "topbar";
+    // Page mode and nav placement are separable knobs. `layout` stays the mode
+    // anchor (landing = one scrolling page, else tabbed sections); nav placement
+    // (top / side / bottom) and stickiness are their own fields, defaulting
+    // sensibly — a legacy "sidebar" layout means a side nav.
+    mode = layout === "landing" ? "scroll" : "tabbed";
+    navPlacement = /^(top|side|bottom)$/.test(manifest.navPlacement)
+      ? manifest.navPlacement
+      : (layout === "sidebar" ? "side" : "top");
+    navSticky = manifest.navSticky !== false;
+
+    // A site is one or more pages, each with its own sections. A legacy manifest
+    // with a top-level `sections` array is treated as a single "Home" page, so
+    // single-page sites render exactly as before.
+    pages = (Array.isArray(manifest.pages) && manifest.pages.length) ? manifest.pages
+      : [{ name: meta.name || "Home", slug: "", sections: Array.isArray(manifest.sections) ? manifest.sections : [] }];
+    multi = pages.length > 1;
+    activeIdx = (typeof manifest._active === "number" && manifest._active >= 0 && manifest._active < pages.length) ? manifest._active : 0;
+    sections = Array.isArray(pages[activeIdx].sections) ? pages[activeIdx].sections : [];
+
+    // Stable section ids. The server generates these on publish, but the builder
+    // draft (previewed here) never sets one, so we synthesize a slugified,
+    // de-duplicated id per section — mirroring the server's slugify+dedupe — and
+    // use it everywhere instead of section.id.
+    var seenIds = {};
+    ids = sections.map(function (s, i) {
+      var base = (s.id && String(s.id)) || slugifyId(s.label) || ("section-" + (i + 1));
+      var id = base, n = 2;
+      while (seenIds[id]) id = base + "-" + (n++);
+      seenIds[id] = 1;
+      return id;
+    });
+
+    brand = meta.brand || meta.name || "";
+    navHidden = meta.navHidden === true;
+
+    applyTheme(theme);
+    document.title = meta.name || document.title;
+    app.textContent = "";
+    app.setAttribute("data-layout", layout);
+    // Multi-page sites use the nav to switch pages; within a page the sections
+    // stack (scroll bands), so force scroll styling in that case.
+    app.setAttribute("data-page", multi ? "scroll" : mode);
+    app.removeAttribute("data-nav");
+    if (!navHidden) app.setAttribute("data-nav", navPlacement);
+    app.removeAttribute("data-sticky");
+    if (navSticky) app.setAttribute("data-sticky", "1");
+
+    if (multi) { renderPageNav(); renderBands(); }
+    else if (mode === "scroll") renderLanding();
+    else renderTabbed();
+
+    renderCredit();
+  }
+
+  // A small "Made with Website Wombat" credit at the foot of the finished site —
+  // the share loop: every downloaded/shared site links a new visitor back to the
+  // builder. Opt-out with meta.hideCredit (a toggle in the builder). The ?ref
+  // tag says whether the click came from a shared link (the /v viewer marks
+  // #app data-slug="datalink") or a downloaded file; the builder counts it.
+  function renderCredit() {
+    if (meta.hideCredit) return;
+    var f = el("footer", "ww-credit");
+    var a = document.createElement("a");
+    a.className = "ww-credit-link";
+    var ref = app.getAttribute("data-slug") === "datalink" ? "credit-shared" : "credit-download";
+    a.href = "https://websitewombat.app/build?ref=" + ref;
+    a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "Made with Website Wombat — build a free site";
+    f.appendChild(a);
+    app.appendChild(f);
+  }
+
+  // Top nav that switches PAGES. Link behavior depends on context:
+  //  • multi-file export (manifest._files present) → real <a href> to sibling files
+  //  • builder preview (framed) → tells the editor to switch its active page
+  //  • datalink / single-file → switches the active page client-side (re-render)
+  function renderPageNav() {
+    if (navHidden) return;
+    var nav = el("nav", "ww-topnav");
+    styleNav(nav);
+    nav.appendChild(el("span", "ww-brand", brand));
+    var links = el("div", "ww-navlinks");
+    var files = manifest._files;
+    pages.forEach(function (p, i) {
+      if (p.showInNav === false) return;
+      var label = p.navLabel || p.name || ("Page " + (i + 1));
+      var a = document.createElement("a");
+      a.textContent = label;
+      if (files && files[i]) {
+        a.href = files[i];
+      } else {
+        a.href = "#";
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (framed) { try { window.parent.postMessage({ ww: "gotopage", index: i }, "*"); } catch (err) {} }
+          else { manifest._active = i; build(manifest); }
+        });
+      }
+      if (i === activeIdx) a.className = "is-active";
+      links.appendChild(a);
+    });
+    if (links.childNodes.length) nav.appendChild(links);
+    app.appendChild(nav);
+  }
+
+  // Render the active page's sections as a stack of full-width bands.
+  function renderBands() {
+    sections.forEach(function (section, i) {
+      var band = el("section", "ww-band");
+      band.id = ids[i];
+      band.setAttribute("data-ww-path", "s" + i);
+      applyBackground(band, section.background || { type: "none" });
+      applyFmt(band, sectionFmt(section));
+      var inner = el("div", "ww-band-inner");
+      (section.blocks || []).forEach(function (b, j) { renderBlock(inner, b, "s" + i + "/b" + j); });
+      band.appendChild(inner);
+      app.appendChild(band);
+    });
+  }
+
+  // ================= LANDING =================
+  function renderLanding() {
+    if (!navHidden) {
+      var nav = el("nav", "ww-topnav");
+      styleNav(nav);
+      nav.appendChild(el("span", "ww-brand", brand));
+      var links = el("div", "ww-navlinks");
+      sections.forEach(function (s, i) {
+        if (s.showInNav === false) return;
+        var targetId = ids[i];
+        var a = document.createElement("a");
+        a.href = "#" + targetId;
+        a.textContent = s.navLabel || s.label || targetId;
+        // Scroll in-page rather than let the browser navigate to the fragment.
+        // In the builder's srcdoc preview a fragment nav re-parses the whole
+        // document (re-running this script); this keeps it a smooth scroll and
+        // still updates the hash so deep-links work on the published site.
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          var target = document.getElementById(targetId);
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+          try { history.replaceState(null, "", "#" + targetId); } catch (err) {}
+        });
+        links.appendChild(a);
+      });
+      if (links.childNodes.length) nav.appendChild(links);
+      app.appendChild(nav);
+    }
+    renderBands();
+  }
+
+  function applyBackground(band, bg) {
+    if (bg.type === "color" && ACCENT_RE.test(String(bg.value || ""))) {
+      band.style.background = bg.value;
+    } else if (bg.type === "gradient" && GRADS[bg.value]) {
+      band.setAttribute("data-grad", bg.value);
+    }
+    if (bg.text === "light" || bg.text === "dark") band.setAttribute("data-text", bg.text);
+  }
+
+  // ================= TABBED (topbar / sidebar) =================
+  function renderTabbed() {
+    var header = el("header", "ww-header");
+    header.appendChild(el("h1", "ww-name", brand));
+    if (meta.tagline) header.appendChild(el("p", "ww-tagline", meta.tagline));
+    var contact = el("p", "ww-contact");
+    if (meta.telephone) contact.appendChild(anchor("tel:" + meta.telephone, meta.telephone));
+    if (meta.email) {
+      if (contact.childNodes.length) contact.appendChild(document.createTextNode("  ·  "));
+      contact.appendChild(anchor("mailto:" + meta.email, meta.email));
+    }
+    if (meta.address) {
+      if (contact.childNodes.length) contact.appendChild(document.createTextNode("  ·  "));
+      contact.appendChild(anchor(directionsUrl(meta.address), meta.address));
+    }
+    if (contact.childNodes.length) header.appendChild(contact);
+    app.appendChild(header);
+
+    // Which sections get a tab. On a tabbed layout the tab strip is the only way
+    // to switch panels, so a section hidden from the menu is omitted entirely
+    // (tab + panel). Guardrail: if that would leave nothing, ignore the flags so
+    // the site is never empty.
+    var shown = sections.map(function (s, i) { return { s: s, i: i }; });
+    if (!navHidden) {
+      var vis = shown.filter(function (x) { return x.s.showInNav !== false; });
+      if (vis.length) shown = vis;
+    }
+
+    var shell = el("div", "ww-shell");
+    var nav = el("nav", "ww-tabs");
+    styleNav(nav);
+    nav.setAttribute("role", "tablist");
+    var content = el("div", "ww-content");
+    // navHidden degrades the tabbed layout to a single scroll of all panels, so
+    // no content becomes unreachable once the tab strip is gone.
+    if (!navHidden) shell.appendChild(nav);
+    shell.appendChild(content);
+    app.appendChild(shell);
+
+    var panels = [];
+    shown.forEach(function (entry) {
+      var section = entry.s, sid = ids[entry.i];
+      var tab = el("button", "ww-tab", section.navLabel || section.label || sid);
+      tab.type = "button";
+      tab.setAttribute("role", "tab");
+      tab.id = "tab-" + sid;
+      tab.setAttribute("aria-controls", "panel-" + sid);
+
+      var panel = el("section", "ww-panel");
+      panel.id = "panel-" + sid;
+      panel.setAttribute("data-ww-path", "s" + entry.i);
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("aria-labelledby", tab.id);
+      applyFmt(panel, sectionFmt(section));
+      (section.blocks || []).forEach(function (b, j) { renderBlock(panel, b, "s" + entry.i + "/b" + j); });
+
+      var rec = { tab: tab, panel: panel, sid: sid };
+      tab.addEventListener("click", function () {
+        activate(panels.indexOf(rec));
+        try { history.replaceState(null, "", "#" + sid); } catch (err) {}
+      });
+      if (!navHidden) nav.appendChild(tab);
+      content.appendChild(panel);
+      panels.push(rec);
+    });
+
+    function activate(index) {
+      panels.forEach(function (p, i) {
+        var on = i === index;
+        p.tab.setAttribute("aria-selected", on ? "true" : "false");
+        p.tab.classList.toggle("is-active", on);
+        p.panel.hidden = !on;
+      });
+    }
+    if (navHidden) {
+      panels.forEach(function (p) { p.panel.hidden = false; });
+    } else {
+      var startId = (location.hash || "").replace(/^#/, "");
+      var startIndex = panels.findIndex(function (p) { return p.sid === startId; });
+      activate(startIndex >= 0 ? startIndex : 0);
+    }
+  }
+
+  // ================= THEME =================
+  function applyTheme(t) {
+    var root = document.documentElement;
+    if (ACCENT_RE.test(String(t.accent || ""))) root.style.setProperty("--ww-accent", t.accent);
+    root.setAttribute("data-font", FONTS[t.font] ? t.font : "system");
+    root.setAttribute("data-mode", MODES[t.mode] ? t.mode : "auto");
+  }
+
+  // ================= BLOCKS =================
+  // `path` (e.g. "s0/b2" or "s0/b1/c0/b0") links this block back to the editor.
+  // Every block renders into its own `.ww-blk` wrapper. The wrapper carries the
+  // optional per-block format tokens (fmt) and is the single node stamped with
+  // data-ww-path — so a block that emits several nodes still maps to one editor
+  // card, and the builder can highlight it / trace clicks back to it.
+  function renderBlock(parent, b, path) {
+    var wrap = el("div", "ww-blk");
+    var fn = b && RENDERERS[b.type];
+    if (fn) fn(wrap, b, path);
+    if (!wrap.childNodes.length) return; // block produced nothing (e.g. empty image)
+    applyFmt(wrap, b.fmt);
+    if (b.type !== "button") applyColors(wrap, b.fmt); // buttons colour the button itself
+    if (path) {
+      wrap.setAttribute("data-ww-path", path);
+      wrap.className += " ww-editable";
+    }
+    parent.appendChild(wrap);
+  }
+
+  // Per-block presentation tokens → data-* on the wrapper (styled by site.css).
+  // Allow-listed, like the theme gates above — no raw values reach the DOM.
+  var FMT_ALIGN = { left: 1, center: 1, right: 1 };
+  var FMT_SIZE = { s: 1, l: 1, xl: 1 };
+  var FMT_COLOR = { muted: 1, accent: 1 };
+  var FMT_SPACE = { tight: 1, roomy: 1 };
+  var FMT_BG = { card: 1, accent: 1 };
+  // Stamp allow-listed fmt tokens as data-* on an element (a block wrapper OR a
+  // section container). Marks it .ww-fmt so the shared token CSS applies.
+  function applyFmt(el, fmt) {
+    if (!fmt || typeof fmt !== "object") return;
+    var any = false;
+    if (FMT_ALIGN[fmt.align]) { el.setAttribute("data-ww-align", fmt.align); any = true; }
+    if (FMT_SIZE[fmt.size]) { el.setAttribute("data-ww-size", fmt.size); any = true; }
+    if (FMT_COLOR[fmt.color]) { el.setAttribute("data-ww-color", fmt.color); any = true; }
+    if (FMT_SPACE[fmt.space]) { el.setAttribute("data-ww-space", fmt.space); any = true; }
+    if (FMT_BG[fmt.bg]) { el.setAttribute("data-ww-bg", fmt.bg); any = true; }
+    if (any) el.className += (el.className ? " " : "") + "ww-fmt";
+  }
+
+  // Custom per-element colours: validated #rrggbb only → inline styles. Inline
+  // wins over the enum-token CSS, so a custom colour overrides a preset. Applied
+  // to a block wrapper (text/background/border) or, for a button, to the button
+  // itself so "fill" recolours the button rather than the space around it.
+  function applyColors(el, fmt) {
+    if (!fmt || typeof fmt !== "object") return;
+    if (ACCENT_RE.test(String(fmt.textColor || ""))) el.style.color = fmt.textColor;
+    if (ACCENT_RE.test(String(fmt.bgColor || ""))) el.style.background = fmt.bgColor;
+    if (ACCENT_RE.test(String(fmt.borderColor || ""))) el.style.border = "1px solid " + fmt.borderColor;
+  }
+  // Nav bar colours (theme.navBg / theme.navText) → inline bg + a --ww-nav-fg var
+  // the nav CSS reads for brand/links/tabs. Validated hex only.
+  function styleNav(navEl) {
+    if (!theme) return;
+    if (ACCENT_RE.test(String(theme.navBg || ""))) navEl.style.background = theme.navBg;
+    if (ACCENT_RE.test(String(theme.navText || ""))) navEl.style.setProperty("--ww-nav-fg", theme.navText);
+  }
+
+  // A section's effective fmt = section.fmt, with the legacy `section.align`
+  // (older templates / landing "center") folded in when fmt.align is unset.
+  function sectionFmt(section) {
+    var f = section.fmt || {};
+    if (section.align && !f.align) return { align: section.align, size: f.size, color: f.color };
+    return f;
+  }
+
+  // A prev/next arrow for a scroll gallery: scrolls it by one image per click.
+  // With `loop`, next past the last image wraps to the first (and prev past the
+  // first wraps to the last). stopPropagation so a click in the builder preview
+  // doesn't also select the block.
+  function galleryNav(gal, dir, glyph, label, loop) {
+    var btn = el("button", "ww-gallery-nav ww-gallery-" + (dir < 0 ? "prev" : "next"), glyph);
+    btn.type = "button";
+    btn.setAttribute("aria-label", label);
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var item = gal.querySelector(".ww-gallery-item");
+      var stepPx = item ? item.getBoundingClientRect().width + 10 : gal.clientWidth * 0.8;
+      var maxLeft = gal.scrollWidth - gal.clientWidth;
+      if (loop && dir > 0 && gal.scrollLeft >= maxLeft - 2) { gal.scrollTo({ left: 0, behavior: "smooth" }); return; }
+      if (loop && dir < 0 && gal.scrollLeft <= 2) { gal.scrollTo({ left: maxLeft, behavior: "smooth" }); return; }
+      gal.scrollBy({ left: dir * stepPx, behavior: "smooth" });
+    });
+    return btn;
+  }
+
+  // Full-size viewer (view mode only — in the builder, image clicks select the
+  // block to edit). Click a gallery/image → dark overlay with the image; click
+  // anywhere, the ✕, or Escape closes it.
+  // `items` = [{src,alt}] from the clicked image's gallery; `idx` = which one.
+  // With 2+ items the overlay gets ‹ / › (and arrow-key) navigation that wraps.
+  function openLightbox(items, idx) {
+    var ov = el("div", "ww-lightbox");
+    var img = document.createElement("img");
+    img.addEventListener("click", function (e) { e.stopPropagation(); }); // clicking the photo doesn't close
+    function show() { var it = items[idx]; img.src = it.src; img.alt = it.alt || ""; }
+    function go(d) { idx = (idx + d + items.length) % items.length; show(); }
+    ov.appendChild(img);
+    if (items.length > 1) {
+      var prev = el("button", "ww-lightbox-nav ww-lightbox-prev", "‹"); prev.type = "button"; prev.setAttribute("aria-label", "Previous");
+      var next = el("button", "ww-lightbox-nav ww-lightbox-next", "›"); next.type = "button"; next.setAttribute("aria-label", "Next");
+      prev.addEventListener("click", function (e) { e.stopPropagation(); go(-1); });
+      next.addEventListener("click", function (e) { e.stopPropagation(); go(1); });
+      ov.appendChild(prev); ov.appendChild(next);
+    }
+    var close = el("button", "ww-lightbox-close", "✕"); close.type = "button"; close.setAttribute("aria-label", "Close");
+    ov.appendChild(close);
+    function done() { if (ov.parentNode) ov.parentNode.removeChild(ov); document.removeEventListener("keydown", onKey); }
+    function onKey(e) {
+      if (e.key === "Escape") done();
+      else if (items.length > 1 && e.key === "ArrowLeft") go(-1);
+      else if (items.length > 1 && e.key === "ArrowRight") go(1);
+    }
+    ov.addEventListener("click", done); // click the backdrop (or ✕) to close
+    document.addEventListener("keydown", onKey);
+    show();
+    document.body.appendChild(ov);
+  }
+  function setupLightbox() {
+    // Capture phase + stopPropagation so an image click opens full size without
+    // also triggering the builder's click-to-select-block bridge underneath.
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest && e.target.closest(".ww-gallery-img, .ww-img");
+      if (!img || !img.src) return;
+      e.stopPropagation();
+      var gal = img.closest(".ww-gallery"), items, idx = 0;
+      if (gal) {
+        var imgs = Array.prototype.slice.call(gal.querySelectorAll(".ww-gallery-img"));
+        items = imgs.map(function (x) { return { src: x.src, alt: x.alt }; });
+        idx = imgs.indexOf(img);
+      } else { items = [{ src: img.src, alt: img.alt }]; }
+      openLightbox(items, idx < 0 ? 0 : idx);
+    }, true);
+  }
+
+  // One renderer per block type. Each appends its DOM to `parent`; renderBlock
+  // stamps the paths afterward. Only `columns` recurses (and needs `path`).
+  var RENDERERS = {
+    heading: function (parent, b) { parent.appendChild(el("h2", "ww-h", b.text || "")); },
+    text: function (parent, b) { parent.appendChild(el("p", "ww-p", b.text || "")); },
+    list: function (parent, b) {
+      var list = el(b.style === "number" ? "ol" : "ul", "ww-list");
+      (b.items || []).forEach(function (i) { list.appendChild(el("li", null, i)); });
+      parent.appendChild(list);
+    },
+    image: function (parent, b) {
+      var isrc = imgSrc(b);
+      if (isrc) parent.appendChild(imageEl(isrc, b.alt, "ww-img"));
+    },
+    gallery: function (parent, b) {
+      var scroll = b.layout === "scroll";
+      var gal = el("div", "ww-gallery");
+      // grid = uniform rows that wrap; scroll = a horizontal swipe/snap strip.
+      gal.setAttribute("data-layout", scroll ? "scroll" : "grid");
+      (b.images || []).forEach(function (im) {
+        var gsrc = imgSrc(im);
+        if (!gsrc) return;
+        var item = el("div", "ww-gallery-item");
+        item.appendChild(imageEl(gsrc, im.alt, "ww-gallery-img"));
+        gal.appendChild(item);
+      });
+      if (!gal.childNodes.length) return;
+      // A scroll strip with 2+ images gets clickable prev/next arrows (swipe still works).
+      if (scroll && gal.childNodes.length > 1) {
+        var wrap = el("div", "ww-gallery-wrap");
+        wrap.appendChild(galleryNav(gal, -1, "‹", "Previous images", b.loop === true));
+        wrap.appendChild(gal);
+        wrap.appendChild(galleryNav(gal, 1, "›", "Next images", b.loop === true));
+        parent.appendChild(wrap);
+      } else {
+        parent.appendChild(gal);
+      }
+    },
+    // Label→value rows. style "hours" = a compact schedule (<dl>); anything else
+    // = a price list with an optional per-row note. Menu and Hours are presets
+    // of this one primitive.
+    rows: function (parent, b) {
+      var items = b.items || [];
+      if (b.style === "hours") {
+        var dl = el("dl", "ww-hours");
+        items.forEach(function (it) {
+          dl.appendChild(el("dt", null, it.label || ""));
+          dl.appendChild(el("dd", null, it.value || ""));
+        });
+        parent.appendChild(dl);
+        return;
+      }
+      if (b.title) parent.appendChild(el("h3", "ww-menu-title", b.title));
+      var wrap = el("div", "ww-menu");
+      items.forEach(function (it) {
+        var row = el("div", "ww-menu-item");
+        var head = el("div", "ww-menu-head");
+        head.appendChild(el("span", "ww-menu-name", it.label || ""));
+        if (it.value) head.appendChild(el("span", "ww-menu-price", it.value));
+        row.appendChild(head);
+        if (it.note) row.appendChild(el("div", "ww-menu-desc", it.note));
+        wrap.appendChild(row);
+      });
+      parent.appendChild(wrap);
+    },
+    button: function (parent, b) {
+      var href = buttonHref(b.action);
+      if (!href) return;
+      var btn = anchor(href, b.label || "");
+      btn.className = "ww-btn";
+      applyColors(btn, b.fmt); // fill / text / border custom colours land on the button
+      parent.appendChild(btn);
+    },
+    social: function (parent, b) {
+      var row = el("div", "ww-social");
+      (b.links || []).forEach(function (l) {
+        var a = anchor(l.url, platformLabel(l.platform));
+        a.className = "ww-social-link";
+        a.setAttribute("data-platform", l.platform);
+        a.rel = "noopener"; a.target = "_blank";
+        if (a.href) row.appendChild(a);
+      });
+      if (row.childNodes.length) parent.appendChild(row);
+    },
+    divider: function (parent) { parent.appendChild(el("hr", "ww-divider")); },
+    hero: function (parent, b) {
+      var hero = el("div", "ww-hero");
+      hero.setAttribute("data-align", b.align === "split" ? "split" : "center");
+      var textcol = el("div", "ww-hero-text");
+      if (b.eyebrow) textcol.appendChild(el("p", "ww-eyebrow", b.eyebrow));
+      if (b.headline) textcol.appendChild(el("h1", "ww-hero-h", b.headline));
+      if (b.subhead) textcol.appendChild(el("p", "ww-hero-sub", b.subhead));
+      if (b.buttons && b.buttons.length) {
+        var actions = el("div", "ww-hero-actions");
+        b.buttons.forEach(function (btn, i) {
+          var href = buttonHref(btn.action);
+          if (!href) return;
+          var a = anchor(href, btn.label || "");
+          a.className = "ww-btn" + (i > 0 ? " ww-btn-outline" : "");
+          actions.appendChild(a);
+        });
+        if (actions.childNodes.length) textcol.appendChild(actions);
+      }
+      hero.appendChild(textcol);
+      var hsrc = b.image && imgSrc(b.image);
+      if (hsrc) {
+        var media = el("div", "ww-hero-media");
+        media.appendChild(imageEl(hsrc, b.image.alt, "ww-hero-img"));
+        hero.appendChild(media);
+      }
+      parent.appendChild(hero);
+    },
+    columns: function (parent, b, path) {
+      var cols = el("div", "ww-columns");
+      cols.setAttribute("data-style", b.style === "card" ? "card" : "plain");
+      (b.columns || []).forEach(function (col, k) {
+        var c = el("div", "ww-col");
+        (col.blocks || []).forEach(function (cb, m) { renderBlock(c, cb, path ? path + "/c" + k + "/b" + m : ""); });
+        cols.appendChild(c);
+      });
+      parent.appendChild(cols);
+    },
+  };
+
+
+  // Images are embedded inline as data:image URIs (the builder compresses on
+  // upload / URL-fetch) so the site travels self-contained. The ZIP export
+  // instead writes each photo to an images/ file and points src at it.
+  function imgSrc(b) {
+    var s = b && b.src;
+    if (typeof s !== "string" || !s) return "";
+    if (/^data:image\//i.test(s)) return s;      // embedded (preview / datalink / .html)
+    if (/^images\/[\w.\-]+$/.test(s)) return s;  // ZIP export: local image file
+    return "";
+  }
+
+  function imageEl(src, alt, cls) {
+    var img = document.createElement("img");
+    img.className = cls;
+    img.loading = "lazy";
+    img.alt = alt || "";
+    img.src = src;
+    return img;
+  }
+
+  function buttonHref(action) {
+    if (!action) return "";
+    switch (action.type) {
+      case "tel": return action.value ? "tel:" + action.value : "";
+      case "mailto": return action.value ? "mailto:" + action.value : "";
+      case "url": return safeHttps(action.value);
+      case "directions": return action.value ? directionsUrl(action.value) : (meta.address ? directionsUrl(meta.address) : "");
+      default: return "";
+    }
+  }
+
+  function platformLabel(p) {
+    var names = { instagram: "Instagram", facebook: "Facebook", x: "X", tiktok: "TikTok", youtube: "YouTube", whatsapp: "WhatsApp", website: "Website" };
+    return names[p] || "Link";
+  }
+  function directionsUrl(address) {
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+  }
+  // Mirrors the server's slugify (worker/manifest.js) so preview ids match published.
+  function slugifyId(input) {
+    return String(input || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[^\w\s-]/g, "")
+      .trim()
+      .replace(/[\s_]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "")
+      .slice(0, 40);
+  }
+
+  // ---- safe DOM + href helpers ----
+  function safeHttps(v) {
+    try { var u = new URL(String(v)); return u.protocol === "https:" ? u.href : ""; } catch (e) { return ""; }
+  }
+  function anchor(href, text) {
+    var a = document.createElement("a");
+    if (/^(tel:|mailto:)/.test(href)) a.href = href;
+    else { var s = safeHttps(href); if (s) a.href = s; }
+    a.textContent = text;
+    return a;
+  }
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  // ---- builder bridge ----
+  // Only when framed (the builder's live-preview iframe) — never on the published
+  // site, datalink viewer, or downloaded copy, which all run top-level. Enables
+  // two-way sync: the editor highlights a block here, and clicks here jump the
+  // editor to the matching block.
+  if (window.parent && window.parent !== window) setupBuilderBridge();
+  setupLightbox(); // click any image for full size (builder preview, viewer, and downloads)
+
+  function setupBuilderBridge() {
+    document.documentElement.setAttribute("data-ww-editing", "1");
+    var style = document.createElement("style");
+    style.textContent =
+      "[data-ww-editing] .ww-editable{cursor:pointer}" +
+      "[data-ww-editing] .ww-editable:hover{outline:2px dashed rgba(110,168,254,.6);outline-offset:2px}" +
+      ".ww-hl{outline:2px solid var(--ww-accent,#2563eb)!important;outline-offset:2px;border-radius:4px}" +
+      ".ww-pulse{animation:ww-pulse 1.1s ease-out}" +
+      "@keyframes ww-pulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.5)}100%{box-shadow:0 0 0 14px rgba(37,99,235,0)}}";
+    (document.head || document.documentElement).appendChild(style);
+
+    // Parent → preview messages: highlight a block, or re-render a new manifest.
+    window.addEventListener("message", function (e) {
+      var d = e.data;
+      if (!d) return;
+      if (d.ww === "highlight") { applyHighlight(d.path, d.scroll, d.pulse); return; }
+      if (d.ww === "manifest" && d.manifest) rebuild(d.manifest);
+    });
+
+    // Preview → parent: a click on any block selects it in the editor. Capture
+    // phase + preventDefault on links/buttons so the preview never navigates or
+    // submits out from under the builder (the tab strip carries no path, so tab
+    // switching still works).
+    document.addEventListener("click", function (e) {
+      var host = e.target.closest && e.target.closest("[data-ww-path]");
+      if (!host) return;
+      var link = e.target.closest("a,button");
+      if (link) e.preventDefault();
+      window.parent.postMessage({ ww: "select", path: host.getAttribute("data-ww-path") }, "*");
+    }, true);
+  }
+
+  // Re-render in place from a new manifest, preserving scroll, the open tab, and
+  // any active highlight — so an edit never yanks the preview back to the top.
+  var hlPath = null;
+  function rebuild(m) {
+    var x = window.scrollX, y = window.scrollY;
+    var activeTab = document.querySelector(".ww-tab.is-active");
+    var activeSid = activeTab ? activeTab.id.replace(/^tab-/, "") : null;
+    build(m);
+    if (activeSid) {
+      var t = document.getElementById("tab-" + activeSid);
+      if (t) t.click();
+    }
+    window.scrollTo(x, y);
+    if (hlPath) applyHighlight(hlPath, false, false);
+  }
+
+  function applyHighlight(path, scroll, pulse) {
+    var prev = document.querySelectorAll(".ww-hl, .ww-pulse");
+    for (var i = 0; i < prev.length; i++) { prev[i].classList.remove("ww-hl"); prev[i].classList.remove("ww-pulse"); }
+    hlPath = path || null;
+    if (!path) return;
+    var node = findByPath(path);
+    if (!node) return;
+    // If the target lives in a hidden tab panel, switch to its tab first.
+    var panel = node.closest && node.closest(".ww-panel");
+    if (panel && panel.hidden) {
+      var tab = document.getElementById(panel.getAttribute("aria-labelledby") || "");
+      if (tab) tab.click();
+    }
+    node.classList.add("ww-hl");
+    if (pulse) { node.classList.add("ww-pulse"); setTimeout(function () { node.classList.remove("ww-pulse"); }, 1100); }
+    if (scroll && node.scrollIntoView) node.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function findByPath(path) {
+    var all = document.querySelectorAll("[data-ww-path]");
+    for (var i = 0; i < all.length; i++) { if (all[i].getAttribute("data-ww-path") === path) return all[i]; }
+    return null;
+  }
+
+  // Kick off the first render (helpers + RENDERERS above are all defined by now).
+  build(manifest);
+})();
+
+</script>
+</body>
+</html>
